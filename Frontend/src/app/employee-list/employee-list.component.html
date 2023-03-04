@@ -8,6 +8,8 @@
             <th> First Name</th>
             <th> Last Name </th>
             <th> Email Id</th>
+            <th> Age</th>
+            <th> Mobile Number</th>
             <th> Actions </th>
         </tr>
     </thead>
@@ -15,7 +17,9 @@
         <tr *ngFor = "let employee of employees" >
             <td> {{ employee.firstName }} </td>
             <td> {{ employee.lastName }} </td>
-            <td> {{ employee.emailId }} </td>
+            <td> {{ employee.email }} </td>
+            <td> {{ employee.age}}</td>
+            <td> {{ employee.mobileNumber}}</td>
             <td>
                 <button (click) = "updateEmployee(employee.id)" class = "btn btn-primary"> Update</button>
                 <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
